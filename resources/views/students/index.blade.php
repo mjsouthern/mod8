@@ -21,6 +21,7 @@
                     <td>{{ $student->name }}</td>
                     <td>{{ $student->course }}</td>
                     <td>
+                       
                         <a href={{ route('students.show', ['student' => $student->id]) }} class="btn btn-secondary">View Details</a>
                         <a href={{ route('students.edit', ['student' => $student->id]) }} class="btn btn-primary">Edit</a>
                         <form action={{ route('students.destroy', ['student' => $student->id] ) }} method="POST" style="display: inline;">

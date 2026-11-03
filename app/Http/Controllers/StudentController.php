@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreStudentRequest;
 use App\Models\Student;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 
 class StudentController extends Controller
 {
@@ -41,6 +42,7 @@ class StudentController extends Controller
      */
     public function show(Student $student)
     {
+        // Gate::authorize('view', $student);
         return view('students.show', compact('student'));
     }
 
